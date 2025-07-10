@@ -1,73 +1,146 @@
-# Welcome to your Lovable project
+# 🌙 Moonlight Tales
 
-## Project info
+**Where AI Magic Meets Bedtime Wonder**
 
-**URL**: https://lovable.dev/projects/4d561e32-4576-420a-9b8a-a295d4d65576
+Moonlight Tales is an AI-powered web app that creates funny and heartwarming bedtime stories for children based on a single sentence or idea. With a beautifully illustrated interface and playful storytelling, this app brings joy, laughter, and life lessons to kids — one story at a time.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🧠 Powered by Lyzr Agent
 
-**Use Lovable**
+This project connects to a Lyzr AI inference agent that generates creative bedtime stories on demand using the following endpoint:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4d561e32-4576-420a-9b8a-a295d4d65576) and start prompting.
+```
+POST https://agent-prod.studio.lyzr.ai/v3/inference/chat/
+```
 
-Changes made via Lovable will be committed automatically to this repo.
+**Headers:**
 
-**Use your preferred IDE**
+```
+Content-Type: application/json  
+x-api-key: sk-default-iPEOmf2biknSikwsVOh0xbDtT5nNkUx6
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**Example Payload:**
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```json
+{
+  "user_id": "rahulrajasekharanmenon64325@gmail.com",
+  "agent_id": "#",
+  "session_id": "#",
+  "message": "A curious girl finds a talking sock in her laundry basket"
+}
+```
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## ✨ Features
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- 🎨 Cute, animated bedtime-themed UI (clouds, stars, moon)
+- 🧒 Child-friendly fonts (e.g., Comic Neue, Baloo 2)
+- 💡 Single sentence input to generate full story
+- 📖 Storybook-style display with soft scrolling or flipping
+- 🌈 Gentle moral or life lesson in every tale
+- 🎵 Optional toggle for soothing background music
+- 📱 Fully responsive and mobile-friendly
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🌈 Tech Stack
+
+- **Frontend**: HTML, CSS, JavaScript or React
+- **Styling**: Tailwind CSS (for pastel tones, smooth UI)
+- **Font**: Google Fonts - Comic Neue / Baloo
+- **API**: Lyzr Agent (AI backend)
+- **Audio**: Howler.js (optional background music)
+
+---
+
+## 🚀 How to Use
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/RahulRmCoder/moonlight-tales.git
+cd moonlight-tales
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Set your environment variables**
+
+Create a `.env` file and add your key:
+
+```env
+VITE_LYZR_API_KEY=sk-default-iPEOmf2biknSikwsVOh0xbDtT5nNkUx6
+```
+
+4. **Run the development server**
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📁 Project Structure
 
-**Use GitHub Codespaces**
+```
+moonlight-tales/
+├── public/               # Static assets (images, sounds)
+├── src/
+│   ├── components/       # InputBox, StoryDisplay, etc.
+│   ├── styles/           # Tailwind or CSS files
+│   ├── App.jsx
+│   └── main.jsx
+├── .env
+├── index.html
+├── package.json
+└── README.md
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🧪 Sample API Call (cURL)
 
-This project is built with:
+```bash
+curl -X POST 'https://agent-prod.studio.lyzr.ai/v3/inference/chat/' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: sk-default-iPEOmf2biknSikwsVOh0xbDtT5nNkUx6' \
+  -d '{
+        "user_id": "rahulrajasekharanmenon64325@gmail.com",
+        "agent_id": "#",
+        "session_id": "#",
+        "message": "A giraffe who wants to touch the moon"
+      }'
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 🌟 Example Input → Output
 
-Simply open [Lovable](https://lovable.dev/projects/4d561e32-4576-420a-9b8a-a295d4d65576) and click on Share -> Publish.
+**Input:**  
+`A shy dragon wants to become a stand-up comedian`
 
-## Can I connect a custom domain to my Lovable project?
+**Generated Story:**  
+> Once upon a time in the giggle-filled valley of Burniebelly, a shy dragon named Drako discovered a love for telling jokes. Every time he tried to breathe fire, he sneezed sparkles instead…
 
-Yes, you can!
+(Continues with a moral at the end.)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🌠 Ending Note
+
+> “Sweet dreams are made of stories.”  
+Bring imagination to life and make bedtime magical — one sentence at a time.
+# moonlight-tales
