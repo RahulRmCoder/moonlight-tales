@@ -14,10 +14,6 @@ const Index = () => {
     setIsLoading(false);
   };
 
-  const handleStartGeneration = () => {
-    setIsLoading(true);
-  };
-
   const handleReset = () => {
     setCurrentStory('');
     setIsLoading(false);
@@ -57,7 +53,6 @@ const Index = () => {
             <StoryInput 
               onStoryGenerate={handleStoryGenerate}
               isLoading={isLoading}
-              onStartGeneration={handleStartGeneration}
             />
           ) : (
             <StoryDisplay 
